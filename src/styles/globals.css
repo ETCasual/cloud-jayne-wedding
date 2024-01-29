@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: caiti;
+  src: url(/assets/fonts/caiti.ttf);
+}
