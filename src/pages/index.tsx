@@ -267,6 +267,24 @@ export default function Home() {
               alt="Endless"
             />
           </div>
+          <p className="pt-4 text-center font-roboto text-sm font-thin uppercase tracking-widest">
+            No words are necessary
+          </p>
+          <p className="pt-1.5 text-center font-roboto text-sm font-thin uppercase tracking-widest">
+            Between two loving hearts
+          </p>
+          <p className="pt-3 text-center font-pingfang text-sm tracking-[0.227rem]">
+            从相遇到相爱 一路走来酸甜苦辣
+          </p>
+          <p className="pt-2 text-center font-pingfang text-sm tracking-[0.227rem]">
+            组成属于我们的爱情故事
+          </p>
+          <p className="pt-2 text-center font-pingfang text-sm tracking-[0.227rem]">
+            就在这天，我们决定
+          </p>
+          <p className="pt-2 text-center font-pingfang text-sm tracking-[0.227rem]">
+            让爱以夫妻之名 延续到永恒
+          </p>
         </div>
       </main>
     </>
