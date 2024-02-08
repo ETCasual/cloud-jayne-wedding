@@ -5,6 +5,7 @@ import { MdMusicNote, MdMusicOff } from "react-icons/md";
 import { IoHeart } from "react-icons/io5";
 
 import { IoTriangleSharp } from "react-icons/io5";
+import { ScheduleTag } from "@/components/scheduleTag";
 
 export default function Home() {
   const [audio, setAudio] = useState(false);
@@ -16,19 +17,19 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="flex min-h-screen w-full flex-col items-center bg-[#fff]">
-        <div className="relative flex h-full min-h-screen w-full max-w-screen-md flex-col px-4 py-3">
-          <button
-            className="sticky top-3 ml-auto flex h-[35px] w-[35px] flex-col items-center justify-center rounded-full bg-[rgba(184,136,103,0.5)] p-1"
-            onClick={() => setAudio((prev) => !prev)}
-          >
-            <span className={audio ? "animate-spin-slow" : ""}>
-              {audio ? (
-                <MdMusicNote color="white" size={30} />
-              ) : (
-                <MdMusicOff size={30} color="white" />
-              )}
-            </span>
-          </button>
+        <button
+          className="sticky right-5 top-3 z-10 ml-auto flex h-[35px] w-[35px] flex-col items-center justify-center rounded-full bg-[rgba(184,136,103,0.5)] p-1"
+          onClick={() => setAudio((prev) => !prev)}
+        >
+          <span className={audio ? "animate-spin-slow" : ""}>
+            {audio ? (
+              <MdMusicNote color="white" size={30} />
+            ) : (
+              <MdMusicOff size={30} color="white" />
+            )}
+          </span>
+        </button>
+        <div className="relative flex h-full min-h-screen w-full max-w-screen-md flex-col px-7 py-3">
           <p className="font-pingfang text-xl font-bold tracking-tight">
             润毅与碧华的婚礼邀请函 ❤
           </p>
@@ -94,17 +95,17 @@ export default function Home() {
             size={25}
             className="mx-auto rotate-180 text-[rgb(184,136,103)]"
           />
-          <p className="font-lora pt-7 text-center text-lg">
+          <p className="pt-7 text-center font-lora text-lg">
             Hello, this is a heartfelt invitation
           </p>
-          <p className="font-lora py-3 text-center text-2xl">/</p>
-          <p className="font-lora pt-2 text-center text-lg">
+          <p className="py-3 text-center font-lora text-2xl">/</p>
+          <p className="pt-2 text-center font-lora text-lg">
             We fell in love on 20th May 2018
           </p>
-          <p className="font-lora pt-2 text-center text-lg">
+          <p className="pt-2 text-center font-lora text-lg">
             and we are overjoyed to invite you to our wedding
           </p>
-          <p className="font-lora pt-2 text-center text-lg">
+          <p className="pt-2 text-center font-lora text-lg">
             on 20th May 2023.
           </p>
           <img
@@ -112,11 +113,11 @@ export default function Home() {
             alt="Rings"
             className="mx-auto mt-7 h-14 w-14 object-cover"
           />
-          <p className="font-lora pt-2 text-center text-lg font-semibold">
+          <p className="pt-2 text-center font-lora text-lg font-semibold">
             - Holy Matrimony -
           </p>
-          <p className="font-lora pt-1 text-center text-lg">Time: 10.00 AM</p>
-          <p className="font-lora pt-1 text-center text-lg">
+          <p className="pt-1 text-center font-lora text-lg">Time: 10.00 AM</p>
+          <p className="pt-1 text-center font-lora text-lg">
             Venue: Wisma FGA, Level 5
           </p>
           <img
@@ -124,11 +125,11 @@ export default function Home() {
             alt="Rings"
             className="mx-auto mt-7 h-14 w-14 object-cover"
           />
-          <p className="font-lora pt-2 text-center text-lg font-semibold">
+          <p className="pt-2 text-center font-lora text-lg font-semibold">
             - Wedding Dinner -
           </p>
-          <p className="font-lora pt-1 text-center text-lg">Time: 7.00 PM</p>
-          <p className="font-lora pt-1 text-center text-lg">
+          <p className="pt-1 text-center font-lora text-lg">Time: 7.00 PM</p>
+          <p className="pt-1 text-center font-lora text-lg">
             Venue: Grand Imperial, Pavilion KL
           </p>
           <div className="mt-20 flex w-full flex-row items-center justify-start gap-4">
@@ -162,7 +163,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="mt-28 grid h-full w-full grid-cols-3 gap-5 px-3">
+          <div className="mt-28 grid h-full w-full grid-cols-3 gap-3">
             <img
               src="/assets/images/grid-2.webp"
               alt="grid_1"
@@ -177,6 +178,93 @@ export default function Home() {
               src="/assets/images/grid-1.webp"
               alt="grid_1"
               className="h-60 w-full object-cover"
+            />
+          </div>
+          <div className="mt-6 flex w-full flex-col items-end gap-3 font-lora uppercase">
+            <p>The sun won&apos;t run to you,</p>
+            <p>The moon won&apos;t,</p>
+            <p>The stars won&apos;t,</p>
+            <p>But I Shall.</p>
+          </div>
+          <div className="mt-10 flex w-full flex-row items-center justify-end gap-4">
+            <div className="h-6 w-6 animate-pulsate rounded-full bg-[#b07751] p-1">
+              <IoHeart className="h-full w-full text-white" />
+            </div>
+            <div className="h-6 w-6 animate-pulsate rounded-full bg-[#b07751] p-1">
+              <IoHeart className="h-full w-full text-white" />
+            </div>
+            <div className="h-6 w-6 animate-pulsate rounded-full bg-[#b07751] p-1">
+              <IoHeart className="h-full w-full text-white" />
+            </div>
+          </div>
+
+          <div className="mb-12 mt-20 w-full bg-[#b88867] py-1.5 text-center font-roboto text-xl uppercase tracking-wider text-white">
+            Wedding Schedule
+          </div>
+          <div className="relative flex w-full flex-col px-5">
+            <img
+              src="/assets/images/scribble.webp"
+              alt="Scribble"
+              className="absolute left-1/2 top-0 w-[150px] -translate-x-1/2 object-cover"
+            />
+            <ScheduleTag pic="rings_2" time="10.00 am" title="we do" start />
+            <ScheduleTag pic="cam" time="12.00 pm" title="wefie" />
+            <ScheduleTag
+              pic="champagne"
+              time="6.30 pm"
+              title="we drink"
+              start
+            />
+            <ScheduleTag pic="shot_glass" time="7.00 pm" title="we eat" />
+          </div>
+
+          <p className="pt-16 text-center font-roboto text-xl uppercase tracking-[0.2rem]">
+            Welcome
+          </p>
+          <p className="pt-4 text-center font-pingfang text-lg tracking-[0.2rem]">
+            诚邀您参加我们的婚礼
+          </p>
+          <div className="mt-20 flex flex-row items-center gap-6">
+            <img
+              className="aspect-[10/16] w-1/2 object-cover"
+              src="/assets/images/intimate.webp"
+              alt="intimate"
+            />
+            <div className="jutify-end flex w-full flex-col items-end self-end">
+              <div className="mb-6 flex w-full flex-row items-center justify-end gap-3">
+                <div className="h-5 w-5 rounded-full bg-[#b07751] p-1">
+                  <IoHeart className="h-full w-full text-white" />
+                </div>
+                <div className="h-5 w-5 rounded-full bg-[#b07751] p-1">
+                  <IoHeart className="h-full w-full text-white" />
+                </div>
+                <div className="h-5 w-5 rounded-full bg-[#b07751] p-1">
+                  <IoHeart className="h-full w-full text-white" />
+                </div>
+              </div>
+              <div className="mb-10 flex flex-col gap-2 font-pingfang tracking-[0.227rem]">
+                <p className="text-right">我们，不期而遇</p>
+                <p className="text-right">一切都是刚刚好</p>
+                <p className="text-right">我温柔的模样</p>
+                <p className="text-right">你宠溺的眼神</p>
+              </div>
+              <p className="text-right font-lora text-sm font-thin uppercase tracking-[0.15rem]">
+                My Heart
+              </p>
+              <p className="mb-4 pt-2 text-right font-lora text-sm font-thin uppercase tracking-[0.15rem]">
+                Is With You
+              </p>
+            </div>
+          </div>
+
+          <div className="relative mt-20 flex h-full w-full flex-col items-center justify-center border-[0.5px] border-black px-4 pb-8 pt-12">
+            <div className="absolute -top-[18px] bg-[rgb(184,136,103)] px-9 py-2 text-center text-xl tracking-[0.25rem] text-white">
+              Our love is endless...
+            </div>
+            <img
+              src="assets/images/endless.webp"
+              className="aspect-[10/14] object-cover px-5"
+              alt="Endless"
             />
           </div>
         </div>
