@@ -4,15 +4,15 @@
 /* eslint-disable @typescript-eslint/no-unsafe-call */
 /* eslint-disable @next/next/no-img-element */
 import Head from "next/head";
-import { useEffect, useState } from "react";
-import { MdMusicNote, MdMusicOff } from "react-icons/md";
-import { IoHeart } from "react-icons/io5";
+// import { useEffect, useState } from "react";
+// import { MdMusicNote, MdMusicOff } from "react-icons/md";
+// import { IoHeart } from "react-icons/io5";
 
-import { IoTriangleSharp } from "react-icons/io5";
-import { ScheduleTag } from "@/components/scheduleTag";
+// import { IoTriangleSharp } from "react-icons/io5";
+// import { ScheduleTag } from "@/components/scheduleTag";
 
 export default function Home() {
-  const [audio, setAudio] = useState(false);
+  // const [audio, setAudio] = useState(false);
 
   return (
     <>
