@@ -3,6 +3,7 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 /* eslint-disable @typescript-eslint/no-unsafe-call */
 /* eslint-disable @next/next/no-img-element */
+import LoveSVG from "@/components/graphics/Love";
 import Head from "next/head";
 // import { useEffect, useState } from "react";
 // import { MdMusicNote, MdMusicOff } from "react-icons/md";
@@ -23,21 +24,36 @@ export default function Home() {
       </Head>
       <main className="relative flex min-h-screen w-full flex-col items-center overflow-hidden bg-[#fff]">
         <div className="relative flex h-full min-h-screen w-full max-w-screen-md flex-col items-center justify-center px-7 py-3">
-          <p className="heart-1 absolute -left-5 -top-0 font-[monospace] text-[10rem] text-[#b07751] opacity-65">
-            ❤
-          </p>
-          <p className="heart-1 absolute -right-12 top-[150px] -translate-y-1/2 font-[monospace] text-[10rem] text-[#b07751] opacity-45">
-            ❤
-          </p>
-          <p className="heart-3 absolute bottom-0 right-1/2 font-[monospace] text-[10rem] text-[#b07751] opacity-50">
-            ❤
-          </p>
-          <p className="heart-1 absolute -left-16 top-[350px] font-[monospace] text-[10rem] text-[#b07751] opacity-35">
-            ❤
-          </p>
-          <p className="heart-2 absolute bottom-[125px] right-3 font-[monospace] text-[10rem] text-[#b07751] opacity-55">
-            ❤
-          </p>
+          <LoveSVG
+            width={120}
+            height={120}
+            className="heart-1 absolute -left-5 -top-0 scale-0 transform fill-[#b07751] font-[monospace] opacity-65"
+          />
+
+          <LoveSVG
+            width={175}
+            height={175}
+            className="heart-1 absolute -right-12 top-[150px] -translate-y-1/2 fill-[#b07751] font-[monospace] text-[5rem] opacity-45"
+          />
+
+          <LoveSVG
+            width={225}
+            height={225}
+            className="heart-3 absolute bottom-0 right-1/2 fill-[#b07751] font-[monospace] text-[7rem] opacity-50"
+          />
+
+          <LoveSVG
+            width={120}
+            height={120}
+            className="heart-1 absolute -left-16 top-[350px] fill-[#b07751] font-[monospace] text-[4rem] opacity-35"
+          />
+
+          <LoveSVG
+            width={120}
+            height={120}
+            className="heart-2 absolute bottom-[125px] right-3 fill-[#b07751] font-[monospace] text-[5.3rem] opacity-55"
+          />
+
           <div className="relative z-20 flex h-full w-full flex-col items-center justify-center">
             <img
               alt="Flower Circle"
