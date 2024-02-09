@@ -29,3 +29,41 @@
     opacity: 1;
   }
 }
+
+* {
+  user-select: none;
+}
+
+@keyframes wiggle {
+  0% {
+    transform: translateY(1.0526315789%) rotate(5deg);
+  }
+
+  25% {
+    transform: translateY(3.3684210526%) rotate(0deg);
+  }
+  50% {
+    transform: translateY(5.3684210526%) rotate(-5deg);
+  }
+  75% {
+    transform: translateY(3.3684210526%) rotate(0deg);
+  }
+  100% {
+    transform: translateY(9.4210526316%) rotate(5deg);
+  }
+}
+
+.heart-1 {
+  animation: wiggle 10s ease-in-out infinite alternate;
+  @apply z-10;
+}
+
+.heart-2 {
+  animation: wiggle 7s ease-in-out infinite alternate;
+  @apply z-10;
+}
+
+.heart-3 {
+  animation: wiggle 4s ease-in-out infinite alternate;
+  @apply z-10;
+}
