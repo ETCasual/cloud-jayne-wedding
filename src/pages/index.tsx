@@ -23,19 +23,19 @@ export default function Home() {
       </Head>
       <main className="relative flex min-h-screen w-full flex-col items-center overflow-hidden bg-[#fff]">
         <div className="relative flex h-full min-h-screen w-full max-w-screen-md flex-col items-center justify-center px-7 py-3">
-          <p className="heart-1 absolute -left-5 -top-0 font-mono text-[10rem] text-[#b07751] opacity-65">
+          <p className="heart-1 absolute -left-5 -top-0 font-[monospace] text-[10rem] text-[#b07751] opacity-65">
             ❤
           </p>
-          <p className="heart-1 absolute -right-12 top-[150px] -translate-y-1/2 font-mono text-[10rem] text-[#b07751] opacity-45">
+          <p className="heart-1 absolute -right-12 top-[150px] -translate-y-1/2 font-[monospace] text-[10rem] text-[#b07751] opacity-45">
             ❤
           </p>
-          <p className="heart-3 absolute bottom-0 right-1/2 font-mono text-[10rem] text-[#b07751] opacity-50">
+          <p className="heart-3 absolute bottom-0 right-1/2 font-[monospace] text-[10rem] text-[#b07751] opacity-50">
             ❤
           </p>
-          <p className="heart-1 absolute -left-16 top-[350px] font-mono text-[10rem] text-[#b07751] opacity-35">
+          <p className="heart-1 absolute -left-16 top-[350px] font-[monospace] text-[10rem] text-[#b07751] opacity-35">
             ❤
           </p>
-          <p className="heart-2 absolute bottom-[125px] right-3 font-mono text-[10rem] text-[#b07751] opacity-55">
+          <p className="heart-2 absolute bottom-[125px] right-3 font-[monospace] text-[10rem] text-[#b07751] opacity-55">
             ❤
           </p>
           <div className="relative z-20 flex h-full w-full flex-col items-center justify-center">
@@ -50,7 +50,7 @@ export default function Home() {
               alt="Endless"
             />
           </div>
-          <p className="mt-10 w-full animate-pulse text-center font-pingfang text-3xl font-bold text-[#b07751]">
+          <p className="mt-10 w-full text-center font-pingfang text-3xl font-bold text-[#b07751]">
             润毅与碧华的婚礼 ❤
           </p>
           <p className="mt-3 w-full text-center font-pingfang text-xl text-[#b07751]">
