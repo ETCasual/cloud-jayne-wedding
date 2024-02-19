@@ -13,6 +13,7 @@ export default {
       animation: {
         "spin-slow": "spin 3s linear infinite",
         pulsate: "pulsate 2.5s ease-in-out infinite",
+        opacity: "opacity 3s linear infinite",
       },
     },
   },
