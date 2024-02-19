@@ -167,7 +167,7 @@ export default function Home() {
                 and we are overjoyed to invite you to our wedding
               </p>
               <p className="pt-2 text-center font-lora text-lg">
-                on 20th May 2023.
+                on 5th May 2024.
               </p>
               <img
                 src="/assets/images/rings.webp"
@@ -178,7 +178,7 @@ export default function Home() {
                 - Holy Matrimony -
               </p>
               <p className="pt-1 text-center font-lora text-lg">
-                Time: 10.00 AM
+                Time: 05.00 PM
               </p>
               <p className="pt-1 text-center font-lora text-lg">
                 Venue: Wisma FGA, Level 5
@@ -388,17 +388,17 @@ export default function Home() {
                   alt="Endless"
                 /> */}
 
-                <div className="w-full">
+                <div className="w-full px-5">
                   <FormikForm />
                 </div>
-                <div className="flex w-full animate-pulse flex-col justify-center gap-1 pt-4">
+                {/* <div className="flex w-full animate-pulse flex-col justify-center gap-1 pt-4">
                   <p className="text-center font-lora text-sm font-bold uppercase">
                     Please click the icon for RSVP
                   </p>
                   <p className="text-center font-pingfang text-base font-bold">
                     请点击图标填写宾客出席表
                   </p>
-                </div>
+                </div> */}
               </div>
               <div className="relative mt-24 w-full origin-right scale-110">
                 <Hearts
