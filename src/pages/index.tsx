@@ -5,7 +5,7 @@
 /* eslint-disable @next/next/no-img-element */
 import LoveSVG from "@/components/graphics/Love";
 import Head from "next/head";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { MdMusicNote, MdMusicOff } from "react-icons/md";
 import { IoHeart } from "react-icons/io5";
 
@@ -14,6 +14,7 @@ import { ScheduleTag } from "@/components/scheduleTag";
 import { env } from "@/env";
 import { Hearts } from "@/components/Hearts";
 import { FormikForm } from "@/components/Form";
+import Sound from "react-sound";
 
 export default function Home() {
   const [audio, setAudio] = useState(false);
@@ -90,6 +91,12 @@ export default function Home() {
                 )}
               </span>
             </button>
+            <Sound
+              url="/assets/audio/RunToYou.mp3"
+              playStatus={audio ? "PLAYING" : "STOPPED"}
+              loop
+            />
+
             <div className="relative flex h-full min-h-screen w-full max-w-screen-md flex-col px-7 py-3">
               <p className="font-pingfang text-xl font-bold tracking-tight">
                 润毅与碧华的婚礼邀请函 ❤
@@ -128,11 +135,11 @@ export default function Home() {
                     className="h-9 w-9"
                   />
                   <div className="flex flex-col justify-start gap-2">
-                    <p className="truncate font-roboto text-2xl font-thin italic">
-                      Until I found you
+                    <p className="truncate font-roboto text-xl font-thin italic">
+                      Run To You
                     </p>
-                    <p className="font-roboto text-lg font-thin italic">
-                      Stephen Sanchez
+                    <p className="font-roboto text-base font-thin italic">
+                      Zhao Bei Er 赵贝尔
                     </p>
                   </div>
                 </div>
