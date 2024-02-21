@@ -5,7 +5,7 @@
 /* eslint-disable @next/next/no-img-element */
 import LoveSVG from "@/components/graphics/Love";
 import Head from "next/head";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { MdMusicNote, MdMusicOff } from "react-icons/md";
 import { IoHeart } from "react-icons/io5";
 
