@@ -86,9 +86,9 @@
   }
 }
 
-.section-2 > .fp-overflow {
-  overflow-y: visible !important;
-}
+/* .section-2 > .fp-overflow {
+  overflow: visible visible !important;
+} */
 
 .fp-watermark {
   @apply hidden;

@@ -81,7 +81,7 @@ export default function Home() {
         ) : (
           <>
             <button
-              className="sticky right-5 top-3 z-10 ml-auto flex h-[35px] w-[35px] flex-col items-center justify-center rounded-full bg-[rgba(184,136,103,0.5)] p-1"
+              className="fixed right-5 top-3 z-10 ml-auto flex h-[35px] w-[35px] flex-col items-center justify-center rounded-full bg-[rgba(184,136,103,0.5)] p-1"
               onClick={() => setAudio((prev) => !prev)}
             >
               <span className={audio ? "animate-spin-slow" : ""}>
@@ -213,10 +213,10 @@ export default function Home() {
           Venue: Wisma FGA, Level 5
         </p> */}
                   <div
-                    className="section section-2 max-w-screen-md overflow-visible px-7"
+                    className="section section-2 min-h-screen max-w-screen-md overflow-visible px-7"
                     style={{ justifyContent: "unset" }}
                   >
-                    <div className="mx-auto flex w-full flex-col items-center border border-[rgb(153,153,153)] px-1">
+                    <div className="mx-auto flex w-full scale-[.875] flex-col items-center border border-[rgb(153,153,153)] px-1">
                       <div className="h-full w-full origin-center rotate-[4deg] border border-[rgb(153,153,153)] px-4 pb-4 pt-10">
                         <div className="flex w-full -rotate-[4deg] flex-col items-center justify-center">
                           <div className="w-[270px] bg-[#b07751] px-5 py-2 text-white">
@@ -244,8 +244,7 @@ export default function Home() {
                         </div>
                       </div>
                     </div>
-
-                    <div className="mt-12 grid h-full w-full grid-cols-3 gap-3">
+                    <div className="mt-5 grid w-full grid-cols-3 gap-3">
                       <img
                         src="/assets/images/grid-2.webp"
                         alt="grid_1"
@@ -268,6 +267,9 @@ export default function Home() {
                       <p>The stars won&apos;t,</p>
                       <p>But I Shall.</p>
                     </div>
+                    <div className="mb-12 mt-10">
+                      <Hearts pulsate />
+                    </div>
                   </div>
                   {/* <div className="mt-10 flex w-full flex-row items-center justify-end gap-4">
 <div className="h-6 w-6 animate-pulsate rounded-full bg-[#b07751] p-1">
@@ -280,11 +282,13 @@ export default function Home() {
   <IoHeart className="h-full w-full text-white" />
 </div>
 </div> */}
-                  <div className="section section-3">
-                    <div className="mt-10">
-                      <Hearts pulsate />
+                  <div className="section section-3 min-h-screen max-w-screen-md py-7">
+                    <div className="flex flex-col items-center font-lora uppercase">
+                      <p>You are cordially invited to</p>
+                      <p>the wedding ceremony of</p>
+                      <p></p>
                     </div>
-                    <div className="mb-12 mt-20 w-full bg-[#b88867] py-1.5 text-center font-roboto text-xl uppercase tracking-wider text-white">
+                    {/* <div className="mb-12 w-full bg-[#b88867] py-1.5 text-center font-roboto text-xl uppercase tracking-wider text-white">
                       Wedding Schedule
                     </div>
                     <div className="relative flex w-full flex-col px-5 sm:px-[7rem]">
@@ -311,7 +315,7 @@ export default function Home() {
                         time="7.00 pm"
                         title="we eat"
                       />
-                    </div>
+                    </div> */}
                   </div>
                   <p className="pt-16 text-center font-roboto text-xl uppercase tracking-[0.2rem]">
                     Welcome
