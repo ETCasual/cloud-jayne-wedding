@@ -5,7 +5,7 @@
 /* eslint-disable @next/next/no-img-element */
 import LoveSVG from "@/components/graphics/Love";
 import Head from "next/head";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { MdMusicNote, MdMusicOff } from "react-icons/md";
 import { IoHeart } from "react-icons/io5";
 
@@ -20,9 +20,18 @@ import { FaWaze } from "react-icons/fa6";
 import { FaLocationDot } from "react-icons/fa6";
 
 import { Color } from "@/components/Color";
+import { Carousel } from "@/components/Carousel";
 
 export default function Home() {
   const [audio, setAudio] = useState(false);
+  const [showCollapse, setShowCollapse] = useState(false);
+
+  useEffect(() => {
+    if (!showCollapse) return;
+    setTimeout(() => {
+      setShowCollapse(false);
+    }, 7500);
+  }, [showCollapse]);
 
   return (
     <>
@@ -84,31 +93,53 @@ export default function Home() {
           </div>
         ) : (
           <>
-            <button
-              className="fixed right-5 top-3 z-10 ml-auto flex h-[35px] w-[35px] flex-col items-center justify-center rounded-full bg-[rgba(184,136,103,0.5)] p-1"
-              onClick={() => setAudio((prev) => !prev)}
+            <div
+              onClick={() => {
+                setShowCollapse((prev) => !prev);
+              }}
+              className="fixed right-3 top-3 z-10 ml-auto flex flex-row items-center overflow-hidden rounded-full bg-[rgba(184,136,103,0.5)] p-1 transition-all duration-150 ease-in-out"
             >
-              <span className={audio ? "animate-spin-slow" : ""}>
-                {audio ? (
-                  <MdMusicNote color="white" size={30} />
-                ) : (
-                  <MdMusicOff size={30} color="white" />
-                )}
-              </span>
-            </button>
-            <Sound
-              url="/assets/audio/RunToYou.mp3"
-              playStatus={audio ? "PLAYING" : "STOPPED"}
-              loop
-            />
+              {showCollapse && (
+                <div className="flex flex-row items-center gap-2 pr-3">
+                  <img
+                    src="/assets/images/main_img_2.webp"
+                    alt="album"
+                    className="h-[30px] w-[30px] rounded-full object-cover"
+                  />
+                  <p className={`font-lora uppercase text-white`}>
+                    Run To You | 赵贝尔
+                  </p>
+                </div>
+              )}
+              <button
+                className="flex h-[30px] w-[30px] flex-col items-center justify-center rounded-full bg-[rgba(184,136,103,0.5)] p-1"
+                onClick={() => {
+                  setAudio((prev) => !prev);
+                  // setAudio((prev) => !prev);
+                }}
+              >
+                <span className={audio ? "animate-spin-slow" : ""}>
+                  {audio ? (
+                    <MdMusicNote color="white" size={30} />
+                  ) : (
+                    <MdMusicOff size={30} color="white" />
+                  )}
+                </span>
+              </button>
+              <Sound
+                url="/assets/audio/RunToYou.mp3"
+                playStatus={audio ? "PLAYING" : "STOPPED"}
+                loop
+              />
+            </div>
 
             <ReactFullpage
               credits={{
                 enabled: false,
               }}
-              render={({ state, fullpageApi }) => (
+              render={({ fullpageApi }) => (
                 <ReactFullpage.Wrapper>
-                  <div className="section relative flex h-full min-h-screen w-full max-w-screen-md flex-col px-7 py-3">
+                  <div className="section relative flex h-full min-h-screen w-full max-w-screen-md flex-col">
                     {/* <p className="font-pingfang text-xl font-bold tracking-tight">
                       润毅与碧华的婚礼邀请函 ❤
                     </p>
@@ -120,27 +151,32 @@ export default function Home() {
                         5.00pm
                       </p>
                     </div> */}
-
-                    <p className="pb-3 pt-5 font-roboto text-base uppercase">
+                    {/* <p className="pb-3 pt-5 font-roboto text-base uppercase">
                       Welcome to our wedding!
-                    </p>
-                    <img
-                      className="h-52 w-full object-cover object-center xl:h-80"
+                    </p> */}
+                    <Carousel
+                      images={[
+                        "/assets/images/main_img.webp",
+                        "/assets/images/main_img_2.webp",
+                        "/assets/images/main_img_3.webp",
+                      ]}
+                    />
+
+                    {/* <img
+                      className="h-72 w-full object-cover object-center xl:h-80"
                       src="/assets/images/main_img.webp"
                       alt="Main Image"
-                    />
-                    <div className="justify-right flex flex-col gap-0.5 pb-6 pt-3">
-                      <p className="text-right text-sm">
-                        人生其实只要有两次幸运就好
-                      </p>
-                      <p className="text-right text-sm">
-                        一次是遇见你 一次是{" "}
-                        <span className="text-xl underline decoration-amber-400 underline-offset-8">
-                          走到底
-                        </span>
-                      </p>
-                    </div>
-                    <div className="flex w-full flex-row items-center justify-between bg-[rgba(184,136,103,0.24)] p-3">
+                    /> */}
+                    <div className="flex flex-col items-center justify-center px-7">
+                      <div className="justify-right mb-4 flex flex-col gap-0.5 border-b border-b-[rgba(184,136,103,0.75)] pb-2 pt-3 font-lora">
+                        <p className="w-full text-center text-sm tracking-[0.3rem]">
+                          人生其实只要有两次幸运就好
+                        </p>
+                        <p className="text-center text-sm tracking-[0.3rem]">
+                          一次是遇见你 一次是走到底
+                        </p>
+                      </div>
+                      {/* <div className="flex w-full flex-row items-center justify-between bg-[rgba(184,136,103,0.24)] p-3">
                       <div className="flex flex-row justify-start gap-3">
                         <img
                           src="assets/images/note.webp"
@@ -168,34 +204,46 @@ export default function Home() {
                           alt="Square"
                         />
                       </div>
-                    </div>
-                    <p className="w-full pb-7 pt-3 text-center text-sm tracking-[0.25rem]">
+                    </div> */}
+                      {/* <p className="w-full pb-7 pt-3 text-center text-sm tracking-[0.25rem]">
                       (请点击右上角音符播放音乐~)
-                    </p>
-                    <IoTriangleSharp
-                      size={25}
-                      className="mx-auto rotate-180 text-[rgb(184,136,103)]"
-                    />
-
-                    <p className="pt-4 text-center font-lora text-base">
-                      这是一封心意满满的婚礼邀请函
-                    </p>
-                    <p className="py-2 text-center font-lora text-2xl">/</p>
-                    <p className="pt-1 text-center font-lora text-base">
-                      收到这封邀请函的你们
-                    </p>
-                    <p className="pt-1 text-center font-lora text-base">
-                      都是我们人生中最重要的部分
-                    </p>
-                    <div className="mt-5 flex w-full flex-row items-center justify-center gap-4">
-                      <div className="h-6 w-6 rounded-full bg-[#b07751] p-1">
-                        <IoHeart className="h-full w-full text-white" />
+                    </p> */}
+                      <p className="pt-4 text-center font-lora text-base">
+                        这是一封心意满满的婚礼邀请函
+                      </p>
+                      <p className="py-2 text-center font-lora text-2xl">/</p>
+                      <p className="pt-1 text-center font-lora text-base">
+                        收到这封邀请函的你们
+                      </p>
+                      <p className="pt-1 text-center font-lora text-base">
+                        都是我们人生中最重要的部分
+                      </p>
+                      <div className="mt-5 w-full px-7">
+                        <button
+                          onClick={() => fullpageApi.moveTo(3)}
+                          className="flex w-full flex-row items-center justify-center gap-4 rounded-full bg-[#b88867] py-2"
+                        >
+                          <p className="font-bold uppercase tracking-wide text-white">
+                            RSVP
+                          </p>
+                        </button>
                       </div>
-                      <div className="h-6 w-6 rounded-full bg-[#b07751] p-1">
-                        <IoHeart className="h-full w-full text-white" />
+                      <div className="mt-12 flex w-full flex-row items-center justify-center gap-4">
+                        <div className="h-6 w-6 rounded-full bg-[#b07751] p-1">
+                          <IoHeart className="h-full w-full text-white" />
+                        </div>
+                        <div className="h-6 w-6 rounded-full bg-[#b07751] p-1">
+                          <IoHeart className="h-full w-full text-white" />
+                        </div>
+                        <div className="h-6 w-6 rounded-full bg-[#b07751] p-1">
+                          <IoHeart className="h-full w-full text-white" />
+                        </div>
                       </div>
-                      <div className="h-6 w-6 rounded-full bg-[#b07751] p-1">
-                        <IoHeart className="h-full w-full text-white" />
+                      <div className="mt-20 animate-bounce">
+                        <IoTriangleSharp
+                          size={25}
+                          className="mx-auto rotate-180 animate-bounce text-[rgb(184,136,103)]"
+                        />
                       </div>
                     </div>
                   </div>
@@ -216,7 +264,7 @@ export default function Home() {
         <p className="pt-1 text-center font-lora text-lg">
           Venue: Wisma FGA, Level 5
         </p> */}
-                  <div
+                  {/* <div
                     className="section section-2 min-h-screen max-w-screen-md overflow-visible px-7"
                     style={{ justifyContent: "unset" }}
                   >
@@ -242,9 +290,9 @@ export default function Home() {
                             alt="Welcome"
                             className="mx-auto mt-5 w-5/6 object-cover object-center"
                           />
-                          {/* <p className=" pb-3 pt-5 text-center font-roboto text-base uppercase">
+                         <p className=" pb-3 pt-5 text-center font-roboto text-base uppercase">
                             Welcome to our wedding!
-                            </p> */}
+                            </p> 
                         </div>
                       </div>
                     </div>
@@ -274,7 +322,7 @@ export default function Home() {
                     <div className="mb-12 mt-10">
                       <Hearts pulsate />
                     </div>
-                  </div>
+                  </div> */}
                   {/* <div className="mt-10 flex w-full flex-row items-center justify-end gap-4">
 <div className="h-6 w-6 animate-pulsate rounded-full bg-[#b07751] p-1">
   <IoHeart className="h-full w-full text-white" />
@@ -289,39 +337,39 @@ export default function Home() {
                   <div className="section section-3 relative min-h-screen w-full max-w-screen-md">
                     <img
                       src="/assets/images/line.png"
-                      className="absolute top-12 opacity-75 mix-blend-overlay"
+                      className="absolute top-7 opacity-75 mix-blend-overlay"
                       alt="Line"
                     />
-                    <LoveSVG
+                    {/* <LoveSVG
                       width={60}
                       height={60}
                       className="heart-1 absolute left-12 top-16 transform fill-[#b07751] font-[monospace] opacity-65"
-                    />
+                    /> */}
 
                     <LoveSVG
                       width={40}
                       height={40}
-                      className="heart-1 absolute right-12 top-[150px] -translate-y-1/2 fill-[#b07751] font-[monospace] text-[5rem] opacity-45"
+                      className="heart-1 absolute right-12 top-[100px] -translate-y-1/2 fill-[#b07751] font-[monospace] text-[5rem] opacity-45"
                     />
 
-                    <LoveSVG
+                    {/* <LoveSVG
                       width={60}
                       height={60}
                       className="heart-3 absolute bottom-0 right-1/2 fill-[#b07751] font-[monospace] text-[7rem] opacity-50"
-                    />
+                    /> */}
 
                     <LoveSVG
                       width={47}
                       height={47}
-                      className="heart-1 absolute left-16 top-[350px] fill-[#b07751] font-[monospace] text-[4rem] opacity-35"
+                      className="heart-1 absolute left-16 top-[150px] fill-[#b07751] font-[monospace] text-[4rem] opacity-35"
                     />
 
-                    <LoveSVG
+                    {/* <LoveSVG
                       width={60}
                       height={60}
                       className="heart-2 absolute bottom-[125px] right-3 fill-[#b07751] font-[monospace] text-[5.3rem] opacity-55"
-                    />
-                    <div className="relative mt-44 flex w-full flex-col px-7 sm:px-[7rem]">
+                    /> */}
+                    <div className="relative mt-32 flex w-full flex-col px-7 sm:px-[7rem]">
                       <img
                         src="/assets/images/scribble.webp"
                         alt="Scribble"
@@ -351,16 +399,22 @@ export default function Home() {
                       />
                     </div>
 
-                    <div className="relative mt-3 flex flex-col items-center justify-center gap-1.5 py-6">
-                      <p className="font-lora text-sm uppercase">Dresscode</p>
-                      <div className="flex flex-row items-center gap-2">
-                        <Color hex="#d2beaa" />
-                        <Color hex="#fff" bordered />
-                        <Color hex="#004aad" />
+                    <div className="y-6 relative mt-4 flex rotate-[7deg] flex-col items-center">
+                      <div className="border-2 border-[##837363]">
+                        <div className="flex -rotate-[7deg] flex-col items-center gap-2 border-2 border-[##837363] px-3 py-4">
+                          <p className="font-lora text-base uppercase">
+                            Dresscode
+                          </p>
+                          <div className="flex w-full flex-row items-center justify-center gap-2">
+                            <Color hex="#AD7956" />
+                            <Color hex="#fff" bordered />
+                            <Color hex="#004aad" />
+                          </div>
+                        </div>
                       </div>
                     </div>
 
-                    <div className="flex flex-col items-center gap-3 px-24">
+                    <div className="mt-5 flex flex-col items-center gap-3 px-24">
                       <button
                         onClick={() =>
                           window.open("https://waze.com/ul/hw2839dwsy")
@@ -383,14 +437,6 @@ export default function Home() {
                         <FaLocationDot className="text-white" size={24} />
                         <p className="font-bold uppercase tracking-wide text-white">
                           Google Maps
-                        </p>
-                      </button>
-                      <button
-                        onClick={() => fullpageApi.moveSectionDown()}
-                        className="flex w-full animate-pulsate flex-row items-center justify-center gap-4 rounded-full bg-[#b88867] py-2"
-                      >
-                        <p className="font-bold uppercase tracking-wide text-white">
-                          RSVP
                         </p>
                       </button>
                     </div>
