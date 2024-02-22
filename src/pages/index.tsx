@@ -16,6 +16,10 @@ import { Hearts } from "@/components/Hearts";
 import { FormikForm } from "@/components/Form";
 import Sound from "react-sound";
 import ReactFullpage from "@fullpage/react-fullpage";
+import { FaWaze } from "react-icons/fa6";
+import { FaLocationDot } from "react-icons/fa6";
+
+import { Color } from "@/components/Color";
 
 export default function Home() {
   const [audio, setAudio] = useState(false);
@@ -126,10 +130,10 @@ export default function Home() {
                       alt="Main Image"
                     />
                     <div className="justify-right flex flex-col gap-0.5 pb-6 pt-3">
-                      <p className="text-right text-lg">
+                      <p className="text-right text-sm">
                         人生其实只要有两次幸运就好
                       </p>
-                      <p className="text-right text-lg">
+                      <p className="text-right text-sm">
                         一次是遇见你 一次是{" "}
                         <span className="text-xl underline decoration-amber-400 underline-offset-8">
                           走到底
@@ -173,7 +177,7 @@ export default function Home() {
                       className="mx-auto rotate-180 text-[rgb(184,136,103)]"
                     />
 
-                    <p className="pt-4 text-center font-pingfang text-base">
+                    <p className="pt-4 text-center font-lora text-base">
                       这是一封心意满满的婚礼邀请函
                     </p>
                     <p className="py-2 text-center font-lora text-2xl">/</p>
@@ -282,11 +286,113 @@ export default function Home() {
   <IoHeart className="h-full w-full text-white" />
 </div>
 </div> */}
-                  <div className="section section-3 min-h-screen max-w-screen-md py-7">
-                    <div className="flex flex-col items-center font-lora uppercase">
-                      <p>You are cordially invited to</p>
-                      <p>the wedding ceremony of</p>
-                      <p></p>
+                  <div className="section section-3 relative min-h-screen w-full max-w-screen-md">
+                    <img
+                      src="/assets/images/line.png"
+                      className="absolute top-12 opacity-75 mix-blend-overlay"
+                      alt="Line"
+                    />
+                    <LoveSVG
+                      width={60}
+                      height={60}
+                      className="heart-1 absolute left-12 top-16 transform fill-[#b07751] font-[monospace] opacity-65"
+                    />
+
+                    <LoveSVG
+                      width={40}
+                      height={40}
+                      className="heart-1 absolute right-12 top-[150px] -translate-y-1/2 fill-[#b07751] font-[monospace] text-[5rem] opacity-45"
+                    />
+
+                    <LoveSVG
+                      width={60}
+                      height={60}
+                      className="heart-3 absolute bottom-0 right-1/2 fill-[#b07751] font-[monospace] text-[7rem] opacity-50"
+                    />
+
+                    <LoveSVG
+                      width={47}
+                      height={47}
+                      className="heart-1 absolute left-16 top-[350px] fill-[#b07751] font-[monospace] text-[4rem] opacity-35"
+                    />
+
+                    <LoveSVG
+                      width={60}
+                      height={60}
+                      className="heart-2 absolute bottom-[125px] right-3 fill-[#b07751] font-[monospace] text-[5.3rem] opacity-55"
+                    />
+                    <div className="relative mt-44 flex w-full flex-col px-7 sm:px-[7rem]">
+                      <img
+                        src="/assets/images/scribble.webp"
+                        alt="Scribble"
+                        className="absolute left-1/2 top-10 w-[150px] -translate-x-1/2 object-cover opacity-50"
+                      />
+                      <ScheduleTag
+                        pic="location"
+                        time="5.00 pm"
+                        title="guest's arrival"
+                        start
+                      />
+                      <ScheduleTag
+                        pic="rings"
+                        time="5.15 pm"
+                        title="Holy Matrimony"
+                      />
+                      <ScheduleTag
+                        pic="camera"
+                        time="6.00 pm"
+                        title="photo session"
+                        start
+                      />
+                      <ScheduleTag
+                        pic="food"
+                        time="7.00 pm"
+                        title="Wedding dinner"
+                      />
+                    </div>
+
+                    <div className="relative mt-3 flex flex-col items-center justify-center gap-1.5 py-6">
+                      <p className="font-lora text-sm uppercase">Dresscode</p>
+                      <div className="flex flex-row items-center gap-2">
+                        <Color hex="#d2beaa" />
+                        <Color hex="#fff" bordered />
+                        <Color hex="#004aad" />
+                      </div>
+                    </div>
+
+                    <div className="flex flex-col items-center gap-3 px-24">
+                      <button
+                        onClick={() =>
+                          window.open("https://waze.com/ul/hw2839dwsy")
+                        }
+                        className="flex w-full flex-row items-center justify-center gap-4 rounded-full bg-[#31cefe] py-2"
+                      >
+                        <FaWaze className="text-white" size={24} />
+                        <p className="font-bold uppercase tracking-wide text-white">
+                          Waze
+                        </p>
+                      </button>
+                      <button
+                        onClick={() =>
+                          window.open(
+                            "https://maps.app.goo.gl/vSRv3FGG1TLjuuCRA",
+                          )
+                        }
+                        className="flex w-full flex-row items-center justify-center gap-4 rounded-full bg-[#bbdaa4] py-2"
+                      >
+                        <FaLocationDot className="text-white" size={24} />
+                        <p className="font-bold uppercase tracking-wide text-white">
+                          Google Maps
+                        </p>
+                      </button>
+                      <button
+                        onClick={() => fullpageApi.moveSectionDown()}
+                        className="flex w-full animate-pulsate flex-row items-center justify-center gap-4 rounded-full bg-[#b88867] py-2"
+                      >
+                        <p className="font-bold uppercase tracking-wide text-white">
+                          RSVP
+                        </p>
+                      </button>
                     </div>
                     {/* <div className="mb-12 w-full bg-[#b88867] py-1.5 text-center font-roboto text-xl uppercase tracking-wider text-white">
                       Wedding Schedule
@@ -317,37 +423,36 @@ export default function Home() {
                       />
                     </div> */}
                   </div>
-                  <p className="pt-16 text-center font-roboto text-xl uppercase tracking-[0.2rem]">
-                    Welcome
-                  </p>
-                  <p className="pt-4 text-center font-pingfang text-lg tracking-[0.2rem]">
-                    诚邀您参加我们的婚礼
-                  </p>
-                  <div className="mt-20 flex flex-row items-center gap-6">
-                    <img
-                      className="aspect-[10/16] w-1/2 object-cover"
-                      src="/assets/images/intimate.webp"
-                      alt="intimate"
-                    />
-                    <div className="jutify-end flex w-full flex-col items-end self-end">
-                      <div className="mb-6">
-                        <Hearts />
+                  <div className="section section-4 relative min-h-screen w-full max-w-screen-md px-7">
+                    <div className="mt-20 flex flex-row items-center gap-6">
+                      <img
+                        className="aspect-[10/16] w-1/2 object-cover"
+                        src="/assets/images/intimate.webp"
+                        alt="intimate"
+                      />
+                      <div className="jutify-end flex w-full flex-col items-end self-end">
+                        {/* <div className="mb-6">
+                          <Hearts />
+                        </div> */}
+                        <div className="mb-10 flex flex-col gap-2 font-pingfang tracking-[0.2rem]">
+                          <p className="text-right">始于初见</p>
+                          <p className="text-right">止于终老</p>
+                          {/* <p className="text-right">我温柔的模样</p>
+                          <p className="text-right">你宠溺的眼神</p> */}
+                        </div>
+
+                        {/* <p className="text-right font-lora text-sm font-thin uppercase tracking-[0.15rem]">
+                          My Heart
+                        </p>
+                        <p className="mb-4 pt-2 text-right font-lora text-sm font-thin uppercase tracking-[0.15rem]">
+                          Is With You
+                        </p> */}
                       </div>
-                      <div className="mb-10 flex flex-col gap-2 font-pingfang tracking-[0.2rem]">
-                        <p className="text-right">我们，不期而遇</p>
-                        <p className="text-right">一切都是刚刚好</p>
-                        <p className="text-right">我温柔的模样</p>
-                        <p className="text-right">你宠溺的眼神</p>
-                      </div>
-                      <p className="text-right font-lora text-sm font-thin uppercase tracking-[0.15rem]">
-                        My Heart
-                      </p>
-                      <p className="mb-4 pt-2 text-right font-lora text-sm font-thin uppercase tracking-[0.15rem]">
-                        Is With You
-                      </p>
+                    </div>
+                    <div className="mt-12 w-full px-5">
+                      <FormikForm />
                     </div>
                   </div>
-
                   <div className="relative mt-20 flex h-full w-full flex-col items-center justify-center border-[0.5px] border-[#00000055] px-4 pb-8 pt-12">
                     <div className="absolute -top-[18px] min-w-[70%] bg-[rgb(184,136,103)] px-8 py-2 text-center text-lg tracking-[0.125rem] text-white lg:text-xl">
                       Our love is endless...
@@ -415,9 +520,6 @@ className="aspect-[10/14] object-cover px-5"
 alt="Endless"
 /> */}
 
-                    <div className="w-full px-5">
-                      <FormikForm />
-                    </div>
                     {/* <div className="flex w-full animate-pulse flex-col justify-center gap-1 pt-4">
 <p className="text-center font-lora text-sm font-bold uppercase">
   Please click the icon for RSVP
