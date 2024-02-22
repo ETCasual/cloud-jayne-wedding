@@ -105,7 +105,7 @@ export default function Home() {
               render={({ state, fullpageApi }) => (
                 <ReactFullpage.Wrapper>
                   <div className="section relative flex h-full min-h-screen w-full max-w-screen-md flex-col px-7 py-3">
-                    <p className="font-pingfang text-xl font-bold tracking-tight">
+                    {/* <p className="font-pingfang text-xl font-bold tracking-tight">
                       润毅与碧华的婚礼邀请函 ❤
                     </p>
                     <div className="flex w-[320px] flex-row items-center justify-between pl-1 pt-3 opacity-60">
@@ -115,7 +115,7 @@ export default function Home() {
                       <p className="font-caiti text-2xl font-thin tracking-wide">
                         5.00pm
                       </p>
-                    </div>
+                    </div> */}
 
                     <p className="pb-3 pt-5 font-roboto text-base uppercase">
                       Welcome to our wedding!
