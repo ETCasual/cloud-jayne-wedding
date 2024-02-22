@@ -169,10 +169,10 @@ export default function Home() {
                     /> */}
                     <div className="flex flex-col items-center justify-center px-7">
                       <div className="justify-right mb-4 flex flex-col gap-0.5 border-b border-b-[rgba(184,136,103,0.75)] pb-2 pt-3 font-lora">
-                        <p className="w-full text-center text-sm tracking-[0.3rem]">
+                        <p className="w-full text-center text-sm font-bold tracking-[0.3rem]">
                           人生其实只要有两次幸运就好
                         </p>
-                        <p className="text-center text-sm tracking-[0.3rem]">
+                        <p className="text-center text-sm font-bold tracking-[0.3rem]">
                           一次是遇见你 一次是走到底
                         </p>
                       </div>
@@ -208,14 +208,16 @@ export default function Home() {
                       {/* <p className="w-full pb-7 pt-3 text-center text-sm tracking-[0.25rem]">
                       (请点击右上角音符播放音乐~)
                     </p> */}
-                      <p className="pt-4 text-center font-lora text-base">
+                      <p className="t`ext-base pt-4 text-center font-lora font-bold">
                         这是一封心意满满的婚礼邀请函
                       </p>
-                      <p className="py-2 text-center font-lora text-2xl">/</p>
-                      <p className="pt-1 text-center font-lora text-base">
+                      <p className="py-2 text-center font-lora text-2xl font-bold">
+                        /
+                      </p>
+                      <p className="pt-1 text-center font-lora text-base font-bold">
                         收到这封邀请函的你们
                       </p>
-                      <p className="pt-1 text-center font-lora text-base">
+                      <p className="pt-1 text-center font-lora text-base font-bold">
                         都是我们人生中最重要的部分
                       </p>
                       <div className="mt-5 w-full px-7">
@@ -408,18 +410,18 @@ export default function Home() {
                           <div className="flex w-full flex-row items-center justify-center gap-2">
                             <Color hex="#AD7956" />
                             <Color hex="#fff" bordered />
-                            <Color hex="#004aad" />
+                            <Color hex="#000080" />
                           </div>
                         </div>
                       </div>
                     </div>
 
-                    <div className="mt-5 flex flex-col items-center gap-3 px-24">
+                    <div className="mt-5 flex flex-row items-center gap-3 px-7">
                       <button
                         onClick={() =>
                           window.open("https://waze.com/ul/hw2839dwsy")
                         }
-                        className="flex w-full flex-row items-center justify-center gap-4 rounded-full bg-[#31cefe] py-2"
+                        className="flex w-full flex-row items-center justify-center gap-2 rounded-full bg-[#31cefe] py-2"
                       >
                         <FaWaze className="text-white" size={24} />
                         <p className="font-bold uppercase tracking-wide text-white">
@@ -432,7 +434,7 @@ export default function Home() {
                             "https://maps.app.goo.gl/vSRv3FGG1TLjuuCRA",
                           )
                         }
-                        className="flex w-full flex-row items-center justify-center gap-4 rounded-full bg-[#bbdaa4] py-2"
+                        className="flex w-full flex-row items-center justify-center gap-2 rounded-full bg-[#bbdaa4] py-2"
                       >
                         <FaLocationDot className="text-white" size={24} />
                         <p className="font-bold uppercase tracking-wide text-white">

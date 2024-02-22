@@ -22,7 +22,7 @@ export const Carousel: FunctionComponent<CarouselProps> = ({ images }) => {
       {images.map((src, i) => (
         <SplideSlide key={i}>
           <img
-            className="h-72 w-full object-cover object-center xl:h-80"
+            className="h-72 w-full object-cover object-top xl:h-80"
             src={src}
             alt="Main Image"
           />
