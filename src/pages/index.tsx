@@ -119,11 +119,11 @@ export default function Home() {
                 alt="Main Image"
               />
               <div className="justify-right flex flex-col gap-0.5 pb-6 pt-3">
-                <p className="text-right text-lg">生命中最好的时光是</p>
+                <p className="text-right text-lg">人生其实只要有两次幸运就好</p>
                 <p className="text-right text-lg">
-                  把我和你变成了{" "}
+                  一次是遇见你 一次是{" "}
                   <span className="text-xl underline decoration-amber-400 underline-offset-8">
-                    我们
+                    走到底
                   </span>
                 </p>
               </div>
@@ -163,8 +163,8 @@ export default function Home() {
                 size={25}
                 className="mx-auto rotate-180 text-[rgb(184,136,103)]"
               />
-              <p className="pt-7 text-center font-lora text-lg">
-                Hello, this is a heartfelt invitation
+              <p className="pt-7 text-center font-pingfang text-lg">
+                这是一封心意满满的婚礼邀请函
               </p>
               <p className="py-3 text-center font-lora text-2xl">/</p>
               <p className="pt-2 text-center font-lora text-lg">
