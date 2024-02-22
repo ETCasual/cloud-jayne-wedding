@@ -10,6 +10,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@fullpage/react-fullpage": "^0.1.42",
     "@t3-oss/env-nextjs": "^0.7.1",
     "formik": "^2.4.5",
     "googleapis": "^133.0.0",
