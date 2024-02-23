@@ -230,7 +230,7 @@ export default function Home() {
                           </p>
                         </button>
                       </div>
-                      <div className="mt-12 flex w-full flex-row items-center justify-center gap-4">
+                      <div className="mt-7 flex w-full flex-row items-center justify-center gap-4">
                         <div className="h-6 w-6 rounded-full bg-[#b07751] p-1">
                           <IoHeart className="h-full w-full text-white" />
                         </div>
@@ -241,7 +241,7 @@ export default function Home() {
                           <IoHeart className="h-full w-full text-white" />
                         </div>
                       </div>
-                      <div className="mt-20 animate-bounce">
+                      <div className="mt-12 animate-bounce">
                         <IoTriangleSharp
                           size={25}
                           className="mx-auto rotate-180 animate-bounce text-[rgb(184,136,103)]"
