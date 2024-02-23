@@ -339,7 +339,7 @@ export default function Home() {
                   <div className="section section-3 relative min-h-screen w-full max-w-screen-md">
                     <img
                       src="/assets/images/line.png"
-                      className="absolute top-7 opacity-75 mix-blend-overlay"
+                      className="absolute top-4 opacity-75 mix-blend-overlay"
                       alt="Line"
                     />
                     {/* <LoveSVG
@@ -351,7 +351,7 @@ export default function Home() {
                     <LoveSVG
                       width={40}
                       height={40}
-                      className="heart-1 absolute right-12 top-[100px] -translate-y-1/2 fill-[#b07751] font-[monospace] text-[5rem] opacity-45"
+                      className="heart-1 absolute right-12 top-[100px] -translate-y-1/2 fill-[#F8C8DC] font-[monospace] text-[5rem] opacity-45"
                     />
 
                     {/* <LoveSVG
@@ -363,19 +363,19 @@ export default function Home() {
                     <LoveSVG
                       width={47}
                       height={47}
-                      className="heart-1 absolute left-16 top-[150px] fill-[#b07751] font-[monospace] text-[4rem] opacity-35"
+                      className="heart-1 absolute left-40 top-[225px] fill-[#F8C8DC] font-[monospace] text-[4rem] opacity-35"
                     />
 
-                    {/* <LoveSVG
+                    <LoveSVG
                       width={60}
                       height={60}
-                      className="heart-2 absolute bottom-[125px] right-3 fill-[#b07751] font-[monospace] text-[5.3rem] opacity-55"
-                    /> */}
-                    <div className="relative mt-32 flex w-full flex-col px-7 sm:px-[7rem]">
+                      className="heart-2 absolute left-12 top-[420px] fill-[#F8C8DC] font-[monospace] text-[5.3rem] opacity-55"
+                    />
+                    <div className="relative mt-32 flex w-full flex-col px-12 sm:px-[7rem]">
                       <img
                         src="/assets/images/scribble.webp"
                         alt="Scribble"
-                        className="absolute left-1/2 top-10 w-[150px] -translate-x-1/2 object-cover opacity-50"
+                        className="absolute -top-7 left-1/2 h-[425px] w-[100px] -translate-x-1/2 object-fill opacity-50"
                       />
                       <ScheduleTag
                         pic="location"
@@ -473,29 +473,45 @@ export default function Home() {
                   </div>
                   <div className="section section-4 relative min-h-screen w-full max-w-screen-md px-7">
                     <div className="mt-20 flex flex-row items-center gap-6">
-                      <img
+                      {/* <img
                         className="aspect-[10/16] w-1/2 object-cover"
                         src="/assets/images/intimate.webp"
                         alt="intimate"
-                      />
-                      <div className="jutify-end flex w-full flex-col items-end self-end">
-                        {/* <div className="mb-6">
+                      /> */}
+                      <div className="mt-5 grid w-full grid-cols-3 gap-3">
+                        <img
+                          src="/assets/images/grid-2.webp"
+                          alt="grid_1"
+                          className="mt-4 h-60 w-full object-cover"
+                        />
+                        <img
+                          src="/assets/images/grid-3.webp"
+                          alt="grid_1"
+                          className="mt-10 h-60 w-full object-cover"
+                        />
+                        <img
+                          src="/assets/images/grid-1.webp"
+                          alt="grid_1"
+                          className="h-60 w-full object-cover"
+                        />
+                      </div>
+                      {/*<div className="jutify-end flex w-full flex-col items-end self-end">
+                     <div className="mb-6">
                           <Hearts />
-                        </div> */}
-                        <div className="mb-10 flex flex-col gap-2 font-pingfang tracking-[0.2rem]">
+                        </div> 
+                      <div className="mb-10 flex flex-col gap-2 font-pingfang tracking-[0.2rem]">
                           <p className="text-right">始于初见</p>
                           <p className="text-right">止于终老</p>
                           {/* <p className="text-right">我温柔的模样</p>
-                          <p className="text-right">你宠溺的眼神</p> */}
+                          <p className="text-right">你宠溺的眼神</p> 
                         </div>
-
-                        {/* <p className="text-right font-lora text-sm font-thin uppercase tracking-[0.15rem]">
+                        <p className="text-right font-lora text-sm font-thin uppercase tracking-[0.15rem]">
                           My Heart
                         </p>
                         <p className="mb-4 pt-2 text-right font-lora text-sm font-thin uppercase tracking-[0.15rem]">
                           Is With You
-                        </p> */}
-                      </div>
+                        </p> 
+                    </div>*/}
                     </div>
                     <div className="mt-12 w-full px-5">
                       <FormikForm />
