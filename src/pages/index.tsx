@@ -424,7 +424,7 @@ export default function Home() {
                         className="flex w-full flex-row items-center justify-center gap-2 rounded-full bg-[#31cefe] py-2"
                       >
                         <FaWaze className="text-white" size={24} />
-                        <p className="font-bold uppercase tracking-wide text-white">
+                        <p className="text-sm font-bold uppercase tracking-wide text-white md:text-base">
                           Waze
                         </p>
                       </button>
@@ -437,7 +437,7 @@ export default function Home() {
                         className="flex w-full flex-row items-center justify-center gap-2 rounded-full bg-[#bbdaa4] py-2"
                       >
                         <FaLocationDot className="text-white" size={24} />
-                        <p className="font-bold uppercase tracking-wide text-white">
+                        <p className="text-sm font-bold uppercase tracking-wide text-white md:text-base">
                           Google Maps
                         </p>
                       </button>
