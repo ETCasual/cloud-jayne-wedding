@@ -34,6 +34,25 @@
   user-select: none;
 }
 
+@keyframes wiggle-sm {
+  0% {
+    transform: rotate(4deg);
+  }
+
+  25% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-4deg);
+  }
+  75% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(4deg);
+  }
+}
+
 @keyframes wiggle {
   0% {
     transform: translateY(1.0526315789%) rotate(5deg);

@@ -21,6 +21,7 @@ import { FaLocationDot } from "react-icons/fa6";
 
 import { Color } from "@/components/Color";
 import { Carousel } from "@/components/Carousel";
+// import Tick from "@pqina/flip";
 
 export default function Home() {
   const [audio, setAudio] = useState(false);
@@ -97,10 +98,10 @@ export default function Home() {
               onClick={() => {
                 setShowCollapse((prev) => !prev);
               }}
-              className="fixed right-3 top-3 z-10 ml-auto flex flex-row items-center overflow-hidden rounded-full bg-[rgba(184,136,103,0.5)] p-1 transition-all duration-150 ease-in-out"
+              className="fixed left-3 top-3 z-10 ml-auto flex flex-row-reverse items-center overflow-hidden rounded-full bg-[rgba(184,136,103,0.5)] p-1 transition-all duration-150 ease-in-out"
             >
               {showCollapse && (
-                <div className="flex flex-row items-center gap-2 pr-3">
+                <div className="flex flex-row-reverse items-center gap-2 pl-3">
                   <img
                     src="/assets/images/main_img_2.webp"
                     alt="album"
@@ -416,15 +417,15 @@ export default function Home() {
                       </div>
                     </div>
 
-                    <div className="mt-5 flex flex-row items-center gap-3 px-7">
+                    <div className="mt-5 flex flex-row items-center gap-3 px-10">
                       <button
                         onClick={() =>
                           window.open("https://waze.com/ul/hw2839dwsy")
                         }
-                        className="flex w-full flex-row items-center justify-center gap-2 rounded-full bg-[#31cefe] py-2"
+                        className="flex w-full flex-row items-center justify-center gap-2 rounded-full bg-[#31cefe] py-1.5"
                       >
                         <FaWaze className="text-white" size={24} />
-                        <p className="text-sm font-bold uppercase tracking-wide text-white md:text-base">
+                        <p className="text-[12px] font-bold uppercase tracking-wide text-white md:text-base">
                           Waze
                         </p>
                       </button>
@@ -434,10 +435,10 @@ export default function Home() {
                             "https://maps.app.goo.gl/vSRv3FGG1TLjuuCRA",
                           )
                         }
-                        className="flex w-full flex-row items-center justify-center gap-2 rounded-full bg-[#bbdaa4] py-2"
+                        className="flex w-full flex-row items-center justify-center gap-2 rounded-full bg-[#bbdaa4] py-1.5"
                       >
                         <FaLocationDot className="text-white" size={24} />
-                        <p className="text-sm font-bold uppercase tracking-wide text-white md:text-base">
+                        <p className="text-[12px] font-bold uppercase tracking-wide text-white md:text-base">
                           Google Maps
                         </p>
                       </button>
@@ -478,6 +479,7 @@ export default function Home() {
                         src="/assets/images/intimate.webp"
                         alt="intimate"
                       /> */}
+                      {/* <Tick to={1714899600000} /> */}
                       <div className="mt-5 grid w-full grid-cols-3 gap-3">
                         <img
                           src="/assets/images/grid-2.webp"

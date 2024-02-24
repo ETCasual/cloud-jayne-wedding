@@ -85,6 +85,9 @@ devDependencies:
   prettier-plugin-tailwindcss:
     specifier: ^0.5.7
     version: 0.5.11(prettier@3.2.4)
+  react-flipclock:
+    specifier: link:@types/@sujitsimon/react-flipclock
+    version: link:@types/@sujitsimon/react-flipclock
   tailwindcss:
     specifier: ^3.3.5
     version: 3.4.1

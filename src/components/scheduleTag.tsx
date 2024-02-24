@@ -21,7 +21,7 @@ export const ScheduleTag: FunctionComponent<ScheduleTagProps> = ({
     >
       <img
         src={`/assets/images/${pic}.png`}
-        className="h-20 w-20 object-cover"
+        className="h-20 w-20 animate-[wiggle-sm_4s_ease-in-out_infinite] object-cover"
         alt={title}
       />
       <div className="flex flex-col items-center justify-center gap-0.5 text-sm">
