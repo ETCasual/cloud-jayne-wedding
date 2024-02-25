@@ -160,13 +160,7 @@ export default function Home() {
                     {/* <p className="pb-3 pt-5 font-roboto text-base uppercase">
                       Welcome to our wedding!
                     </p> */}
-                    <Carousel
-                      images={[
-                        "/assets/images/main_img.webp",
-                        "/assets/images/main_img_2.webp",
-                        "/assets/images/main_img_3.webp",
-                      ]}
-                    />
+                    <Carousel />
 
                     {/* <img
                       className="h-72 w-full object-cover object-center xl:h-80"

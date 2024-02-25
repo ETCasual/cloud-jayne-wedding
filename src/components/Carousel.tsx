@@ -5,9 +5,9 @@ import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { type FunctionComponent } from "react";
 
 interface CarouselProps {
-  images: string[];
+  images?: string[];
 }
-export const Carousel: FunctionComponent<CarouselProps> = ({ images }) => {
+export const Carousel: FunctionComponent<CarouselProps> = ({}) => {
   return (
     <Splide
       className="w-full"
@@ -19,15 +19,27 @@ export const Carousel: FunctionComponent<CarouselProps> = ({ images }) => {
         interval: 2500,
       }}
     >
-      {images.map((src, i) => (
-        <SplideSlide key={i}>
-          <img
-            className="h-96 w-full object-cover object-top xl:h-80"
-            src={src}
-            alt="Main Image"
-          />
-        </SplideSlide>
-      ))}
+      <SplideSlide>
+        <img
+          className="h-96 w-full object-cover object-top xl:h-80"
+          src={"/assets/images/main_img.webp"}
+          alt="Main Image"
+        />
+      </SplideSlide>
+      <SplideSlide>
+        <img
+          className="h-96 w-full object-cover object-top xl:h-80"
+          src={"/assets/images/main_img_2.webp"}
+          alt="Main Image"
+        />
+      </SplideSlide>
+      <SplideSlide>
+        <img
+          className="h-96 w-full object-cover object-right-top xl:h-80"
+          src={"/assets/images/main_img_3.webp"}
+          alt="Main Image"
+        />
+      </SplideSlide>
     </Splide>
   );
 };
