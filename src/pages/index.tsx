@@ -472,7 +472,7 @@ export default function Home() {
                     </div> */}
                   </div>
                   <div className="section section-4 relative min-h-screen w-full max-w-screen-md px-7">
-                    <div className="ites-center mt-12 flex flex-row justify-center">
+                    <div className="ites-center mt-5 flex flex-row justify-center">
                       <FlipClock />
                     </div>
                     <div className="flex flex-row items-center gap-6">
@@ -482,7 +482,7 @@ export default function Home() {
                         alt="intimate"
                       /> */}
 
-                      <div className="mt-5 grid w-full">
+                      <div className="mt-4 grid w-full">
                         {/* <img
                           src="/assets/images/grid-2.webp"
                           alt="grid_1"
@@ -518,10 +518,10 @@ export default function Home() {
                         </p> 
                     </div>*/}
                     </div>
-                    <div className="mt-12 w-full px-5">
+                    <div className="mt-7 w-full px-5">
                       <FormikForm />
                     </div>
-                    <div className="mx-auto mt-8 scale-75">
+                    <div className="my-4 flex w-full scale-90 flex-col items-center justify-center">
                       <Hearts pulsate />
                     </div>
                   </div>

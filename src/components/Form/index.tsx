@@ -45,7 +45,7 @@ export const FormikForm = () => {
       })}
     >
       {({ isSubmitting }) => (
-        <Form className="flex w-full flex-col items-center justify-center gap-3">
+        <Form className="flex w-full flex-col items-center justify-center gap-2">
           <TextField name="guest" placeholder="姓名 Guest Name" />
           <TextField
             name="contact"
@@ -60,7 +60,7 @@ export const FormikForm = () => {
           <button
             type="submit"
             disabled={isSubmitting || submitted}
-            className={`mt-2 flex flex-col items-center rounded-md px-8 py-1 font-roboto uppercase transition-all duration-100 text-white${submitted ? " bg-green-500" : " bg-[#b07751]"}`}
+            className={`mt-1 flex flex-col items-center rounded-md px-8 py-1 font-roboto uppercase transition-all duration-100 text-white${submitted ? " bg-green-500" : " bg-[#b07751]"}`}
           >
             {/* eslint-disable-next-line react/jsx-no-comment-textnodes */}
             <p className="">{submitted ? "提交成功!" : "提交"}</p>
