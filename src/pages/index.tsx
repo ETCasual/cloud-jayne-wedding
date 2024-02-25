@@ -371,7 +371,7 @@ export default function Home() {
                       height={60}
                       className="heart-2 absolute left-12 top-[420px] fill-[#F8C8DC] font-[monospace] text-[5.3rem] opacity-55"
                     />
-                    <div className="relative mt-20 flex w-full flex-col overflow-y-hidden px-12 sm:px-[7rem]">
+                    <div className="relative mt-5 flex w-full flex-col overflow-y-hidden px-12 sm:px-[7rem]">
                       <div className="mb-12 mt-2 flex w-full flex-col items-center justify-center">
                         <p className="font-lora text-sm uppercase">
                           约翰一书 1 john 4:19
