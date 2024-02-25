@@ -21,21 +21,21 @@ export const Carousel: FunctionComponent<CarouselProps> = ({}) => {
     >
       <SplideSlide>
         <img
-          className="h-96 w-full object-cover object-top xl:h-80"
+          className="h-72 w-full object-cover object-top xl:h-80"
           src={"/assets/images/main_img.webp"}
           alt="Main Image"
         />
       </SplideSlide>
       <SplideSlide>
         <img
-          className="h-96 w-full object-cover object-top xl:h-80"
+          className="h-72 w-full object-cover object-top xl:h-80"
           src={"/assets/images/main_img_2.webp"}
           alt="Main Image"
         />
       </SplideSlide>
       <SplideSlide>
         <img
-          className="h-96 w-full object-cover object-right-top xl:h-80"
+          className="h-72 w-full object-cover object-right-top xl:h-80"
           src={"/assets/images/main_img_3.webp"}
           alt="Main Image"
         />

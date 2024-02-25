@@ -113,12 +113,12 @@
   @apply hidden;
 }
 
-/* .fp-table {
+.fp-table {
   justify-content: start !important;
-} */
+}
 
-.fullpage-wrapper {
+/* .fullpage-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
+} */

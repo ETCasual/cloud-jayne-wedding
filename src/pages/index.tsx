@@ -46,9 +46,9 @@ export default function Home() {
         <meta name="description" content="The wedding of Cloud and Jayne." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="relative flex min-h-screen w-full flex-col items-center bg-[#fff]">
+      <main className="relative flex w-full flex-col items-center bg-[#fff]">
         {env.NEXT_PUBLIC_IS_STAGING === "0" ? (
-          <div className="relative flex h-full min-h-screen w-full max-w-screen-md flex-col items-center justify-center px-7 py-3">
+          <div className="relative flex h-full w-full max-w-screen-md flex-col items-center justify-center px-7 py-3">
             <LoveSVG
               width={120}
               height={120}
@@ -145,8 +145,8 @@ export default function Home() {
               }}
               render={({ fullpageApi }) => (
                 <ReactFullpage.Wrapper>
-                  <div className="section relative">
-                    <div className="flex min-h-screen w-full max-w-screen-md flex-col">
+                  <div className="section relative h-full">
+                    <div className="flex h-full w-full max-w-screen-md flex-col">
                       {/* <p className="font-pingfang text-xl font-bold tracking-tight">
                       润毅与碧华的婚礼邀请函 ❤
                     </p>
@@ -338,8 +338,8 @@ export default function Home() {
   <IoHeart className="h-full w-full text-white" />
 </div>
 </div> */}
-                  <div className="section section-2">
-                    <div className="flex min-h-screen w-full max-w-screen-md flex-col">
+                  <div className="section section-2 h-full">
+                    <div className="flex h-full w-full max-w-screen-md flex-col">
                       <img
                         src="/assets/images/line.png"
                         className="absolute top-24 scale-[1.2] overflow-hidden opacity-50"
@@ -457,8 +457,8 @@ export default function Home() {
                       </div>
                     </div>
                   </div>
-                  <div className="section section-3">
-                    <div className="relative flex min-h-screen w-full max-w-screen-md flex-col px-7">
+                  <div className="section section-3 h-full">
+                    <div className="relative flex h-full w-full max-w-screen-md flex-col px-7">
                       <div className="mt-5 flex flex-row items-center justify-center">
                         <FlipClock />
                       </div>
