@@ -339,7 +339,7 @@ export default function Home() {
                   <div className="section section-3 relative min-h-screen w-full max-w-screen-md overflow-hidden">
                     <img
                       src="/assets/images/line.png"
-                      className="absolute top-24 scale-[1.2] overflow-hidden opacity-75 mix-blend-overlay"
+                      className="absolute top-24 scale-[1.2] overflow-hidden opacity-50"
                       alt="Line"
                     />
                     {/* <LoveSVG
@@ -371,8 +371,8 @@ export default function Home() {
                       height={60}
                       className="heart-2 absolute left-12 top-[420px] fill-[#F8C8DC] font-[monospace] text-[5.3rem] opacity-55"
                     />
-                    <div className="relative mt-5 flex w-full flex-col overflow-y-hidden px-12 sm:px-[7rem]">
-                      <div className="mb-12 mt-2 flex w-full flex-col items-center justify-center">
+                    <div className="relative mt-2 flex w-full flex-col overflow-y-hidden px-12 sm:px-[7rem]">
+                      <div className="mb-24 mt-2 flex w-full flex-col items-center justify-center">
                         <p className="font-lora text-sm uppercase">
                           约翰一书 1 john 4:19
                         </p>
@@ -385,7 +385,7 @@ export default function Home() {
                       <img
                         src="/assets/images/scribble.webp"
                         alt="Scribble"
-                        className="absolute left-1/2 top-24 h-[425px] w-[100px] -translate-x-1/2 object-fill opacity-50"
+                        className="absolute left-1/2 top-32 h-[425px] w-[100px] -translate-x-1/2 object-fill opacity-50"
                       />
                       <ScheduleTag
                         pic="location"
