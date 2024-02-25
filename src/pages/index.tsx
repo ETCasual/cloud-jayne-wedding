@@ -219,7 +219,7 @@ export default function Home() {
                           收到这封邀请函的你们
                         </p>
                         <p className="pt-1 text-center font-lora text-base font-bold">
-                          都是我们人生中最重要的部分
+                          都是我们人生中最重要的人
                         </p>
                         <div className="mt-4 w-full px-7">
                           <button
