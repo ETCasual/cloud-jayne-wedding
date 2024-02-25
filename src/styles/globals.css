@@ -34,6 +34,25 @@
   user-select: none;
 }
 
+@keyframes wiggle-sm {
+  0% {
+    transform: rotate(4deg);
+  }
+
+  25% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-4deg);
+  }
+  75% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(4deg);
+  }
+}
+
 @keyframes wiggle {
   0% {
     transform: translateY(1.0526315789%) rotate(5deg);
@@ -85,3 +104,21 @@
     opacity: 1;
   }
 }
+
+/* .section-2 > .fp-overflow {
+  overflow: visible visible !important;
+} */
+
+.fp-watermark {
+  @apply hidden;
+}
+
+.fp-table {
+  justify-content: start !important;
+}
+
+/* .fullpage-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+} */
