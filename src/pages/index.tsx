@@ -21,7 +21,12 @@ import { FaLocationDot } from "react-icons/fa6";
 
 import { Color } from "@/components/Color";
 import { Carousel } from "@/components/Carousel";
-// import Tick from "@pqina/flip";
+import dynamic from "next/dynamic";
+import { UnevenCarousel } from "@/components/graphics/UnevenCarousel";
+
+const FlipClock = dynamic(() => import("@/components/FlipClock"), {
+  ssr: false,
+});
 
 export default function Home() {
   const [audio, setAudio] = useState(false);
@@ -473,15 +478,18 @@ export default function Home() {
                     </div> */}
                   </div>
                   <div className="section section-4 relative min-h-screen w-full max-w-screen-md px-7">
-                    <div className="mt-20 flex flex-row items-center gap-6">
+                    <div className="ites-center mt-20 flex flex-row justify-center">
+                      <FlipClock />
+                    </div>
+                    <div className="flex flex-row items-center gap-6">
                       {/* <img
                         className="aspect-[10/16] w-1/2 object-cover"
                         src="/assets/images/intimate.webp"
                         alt="intimate"
                       /> */}
-                      {/* <Tick to={1714899600000} /> */}
-                      <div className="mt-5 grid w-full grid-cols-3 gap-3">
-                        <img
+
+                      <div className="mt-5 grid w-full">
+                        {/* <img
                           src="/assets/images/grid-2.webp"
                           alt="grid_1"
                           className="mt-4 h-60 w-full object-cover"
@@ -495,7 +503,8 @@ export default function Home() {
                           src="/assets/images/grid-1.webp"
                           alt="grid_1"
                           className="h-60 w-full object-cover"
-                        />
+                        /> */}
+                        <UnevenCarousel />
                       </div>
                       {/*<div className="jutify-end flex w-full flex-col items-end self-end">
                      <div className="mb-6">

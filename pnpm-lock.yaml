@@ -8,9 +8,15 @@ dependencies:
   '@fullpage/react-fullpage':
     specifier: ^0.1.42
     version: 0.1.42
+  '@leenguyen/react-flip-clock-countdown':
+    specifier: ^1.5.0
+    version: 1.5.0(react@18.2.0)
   '@splidejs/react-splide':
     specifier: ^0.7.12
     version: 0.7.12
+  '@splidejs/splide-extension-auto-scroll':
+    specifier: ^0.5.3
+    version: 0.5.3
   '@t3-oss/env-nextjs':
     specifier: ^0.7.1
     version: 0.7.3(typescript@5.3.3)(zod@3.22.4)
@@ -228,6 +234,16 @@ packages:
       '@jridgewell/sourcemap-codec': 1.4.15
     dev: true
 
+  /@leenguyen/react-flip-clock-countdown@1.5.0(react@18.2.0):
+    resolution: {integrity: sha512-4j8YJRYhfxx4P2vHcJPKZqAz+Pp3qLEJQnj/bpLNFxbvoQ0hwr/GPrbdWs3e7Utwr/rU/kVHver48gQHQFuOnQ==}
+    engines: {node: '>=12'}
+    peerDependencies:
+      react: '>= 16.13.0'
+    dependencies:
+      clsx: 1.2.1
+      react: 18.2.0
+    dev: false
+
   /@next/env@14.1.0:
     resolution: {integrity: sha512-Py8zIo+02ht82brwwhTg36iogzFqGLPXlRGKQw5s+qP/kMNc4MAyDeEwBKDijk6zTIbegEgu8Qy7C1LboslQAw==}
     dev: false
@@ -355,6 +371,10 @@ packages:
     resolution: {integrity: sha512-UfXH+j47jsMc4x5HA/aOwuuHPqn6y9+ZTNYPWDRD8iLKvIVMZlzq2unjUEvyDAU+TTVPZOXkG2Ojeoz0P4AkZw==}
     dependencies:
       '@splidejs/splide': 4.1.4
+    dev: false
+
+  /@splidejs/splide-extension-auto-scroll@0.5.3:
+    resolution: {integrity: sha512-vPJ8Tn4uebnHa6scBcIypW154HTDenkazX9Nw8T1na44n7OtLoz40R4RoirteV7taPWW7w7ZZPCiEpi2ReYFAQ==}
     dev: false
 
   /@splidejs/splide@4.1.4:
@@ -898,6 +918,11 @@ packages:
 
   /client-only@0.0.1:
     resolution: {integrity: sha512-IV3Ou0jSMzZrd3pZ48nLkT9DA7Ag1pnPzaiQhpW7c3RbcqqzvzzVu+L8gfqMp/8IM2MQtSiqaCxrrcfu8I8rMA==}
+    dev: false
+
+  /clsx@1.2.1:
+    resolution: {integrity: sha512-EcR6r5a8bj6pu3ycsa/E/cKVGuTgZJZdsyUYHOksG/UHIiKfjxzRxYJpyVBwYaQeOvghal9fcc4PidlgzugAQg==}
+    engines: {node: '>=6'}
     dev: false
 
   /color-convert@2.0.1:
