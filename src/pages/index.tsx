@@ -168,7 +168,7 @@ export default function Home() {
                       alt="Main Image"
                     /> */}
                     <div className="flex flex-col items-center justify-center px-7">
-                      <div className="justify-right mb-4 flex flex-col gap-0.5 border-b border-b-[rgba(184,136,103,0.75)] pb-2 pt-3 font-lora">
+                      <div className="justify-right mb-2 flex flex-col gap-0.5 border-b border-b-[rgba(184,136,103,0.75)] pb-2 pt-3 font-lora">
                         <p className="w-full text-center text-sm font-bold tracking-[0.3rem]">
                           人生其实只要有两次幸运就好
                         </p>
@@ -208,10 +208,10 @@ export default function Home() {
                       {/* <p className="w-full pb-7 pt-3 text-center text-sm tracking-[0.25rem]">
                       (请点击右上角音符播放音乐~)
                     </p> */}
-                      <p className="t`ext-base pt-4 text-center font-lora font-bold">
+                      <p className="pt-3 text-center font-lora text-base font-bold">
                         这是一封心意满满的婚礼邀请函
                       </p>
-                      <p className="py-2 text-center font-lora text-2xl font-bold">
+                      <p className="text-center font-lora text-2xl font-bold">
                         /
                       </p>
                       <p className="pt-1 text-center font-lora text-base font-bold">
@@ -220,7 +220,7 @@ export default function Home() {
                       <p className="pt-1 text-center font-lora text-base font-bold">
                         都是我们人生中最重要的部分
                       </p>
-                      <div className="mt-5 w-full px-7">
+                      <div className="mt-4 w-full px-7">
                         <button
                           onClick={() => fullpageApi.moveTo(3)}
                           className="flex w-full flex-row items-center justify-center gap-4 rounded-full bg-[#b88867] py-2"
@@ -230,7 +230,7 @@ export default function Home() {
                           </p>
                         </button>
                       </div>
-                      <div className="mt-7 flex w-full flex-row items-center justify-center gap-4">
+                      <div className="mt-5 flex w-full flex-row items-center justify-center gap-4">
                         <div className="h-6 w-6 rounded-full bg-[#b07751] p-1">
                           <IoHeart className="h-full w-full text-white" />
                         </div>
@@ -241,7 +241,7 @@ export default function Home() {
                           <IoHeart className="h-full w-full text-white" />
                         </div>
                       </div>
-                      <div className="mt-12 animate-bounce">
+                      <div className="mt-7 animate-bounce">
                         <IoTriangleSharp
                           size={25}
                           className="mx-auto rotate-180 animate-bounce text-[rgb(184,136,103)]"
@@ -336,10 +336,10 @@ export default function Home() {
   <IoHeart className="h-full w-full text-white" />
 </div>
 </div> */}
-                  <div className="section section-3 relative min-h-screen w-full max-w-screen-md">
+                  <div className="section section-3 relative min-h-screen w-full max-w-screen-md overflow-x-hidden">
                     <img
                       src="/assets/images/line.png"
-                      className="absolute top-4 opacity-75 mix-blend-overlay"
+                      className="absolute top-24 scale-[1.2] overflow-hidden opacity-75 mix-blend-overlay"
                       alt="Line"
                     />
                     {/* <LoveSVG
@@ -401,7 +401,7 @@ export default function Home() {
                       />
                     </div>
 
-                    <div className="y-6 relative mt-4 flex rotate-[7deg] flex-col items-center">
+                    <div className="relative mt-4 flex rotate-[7deg] flex-col items-center">
                       <div className="border-2 border-[##837363]">
                         <div className="flex -rotate-[7deg] flex-col items-center gap-2 border-2 border-[##837363] px-3 py-4">
                           <p className="font-lora text-base uppercase">
@@ -416,12 +416,12 @@ export default function Home() {
                       </div>
                     </div>
 
-                    <div className="mt-5 flex flex-row items-center gap-3 px-10">
+                    <div className="mt-5 flex w-full flex-row items-center justify-center gap-3">
                       <button
                         onClick={() =>
                           window.open("https://waze.com/ul/hw2839dwsy")
                         }
-                        className="flex w-full flex-row items-center justify-center gap-2 rounded-full bg-[#31cefe] py-1.5"
+                        className="flex flex-row items-center justify-center gap-2 rounded-full bg-[#31cefe] px-3 py-1.5"
                       >
                         <FaWaze className="text-white" size={24} />
                         <p className="text-[12px] font-bold uppercase tracking-wide text-white md:text-base">
@@ -434,7 +434,7 @@ export default function Home() {
                             "https://maps.app.goo.gl/vSRv3FGG1TLjuuCRA",
                           )
                         }
-                        className="flex w-full flex-row items-center justify-center gap-2 rounded-full bg-[#bbdaa4] py-1.5"
+                        className="flex flex-row items-center justify-center gap-2 rounded-full bg-[#bbdaa4] px-3 py-1.5"
                       >
                         <FaLocationDot className="text-white" size={24} />
                         <p className="text-[12px] font-bold uppercase tracking-wide text-white md:text-base">
@@ -521,8 +521,11 @@ export default function Home() {
                     <div className="mt-12 w-full px-5">
                       <FormikForm />
                     </div>
+                    <div className="mx-auto mt-8 scale-75">
+                      <Hearts pulsate />
+                    </div>
                   </div>
-                  <div className="relative mt-20 flex h-full w-full flex-col items-center justify-center border-[0.5px] border-[#00000055] px-4 pb-8 pt-12">
+                  {/* <div className="relative mt-20 flex h-full w-full flex-col items-center justify-center border-[0.5px] border-[#00000055] px-4 pb-8 pt-12">
                     <div className="absolute -top-[18px] min-w-[70%] bg-[rgb(184,136,103)] px-8 py-2 text-center text-lg tracking-[0.125rem] text-white lg:text-xl">
                       Our love is endless...
                     </div>
@@ -531,8 +534,8 @@ export default function Home() {
                       className="aspect-[10/14] object-cover px-5"
                       alt="Endless"
                     />
-                  </div>
-                  <p className="pt-4 text-center font-roboto text-sm font-thin uppercase tracking-widest">
+                  </div> */}
+                  {/* <p className="pt-4 text-center font-roboto text-sm font-thin uppercase tracking-widest">
                     No words are necessary
                   </p>
                   <p className="pt-1.5 text-center font-roboto text-sm font-thin uppercase tracking-widest">
@@ -549,9 +552,9 @@ export default function Home() {
                   </p>
                   <p className="pt-2 text-center font-pingfang text-sm tracking-[0.227rem]">
                     让爱以夫妻之名 延续到永恒
-                  </p>
+                  </p> */}
 
-                  <div className="flex w-full flex-row items-end justify-center pt-20">
+                  {/* <div className="flex w-full flex-row items-end justify-center pt-20">
                     <div className="border-[.5px] border-r-0 border-[rgb(153,153,153)] p-3">
                       <img
                         src="/assets/images/end-2.webp"
@@ -564,8 +567,8 @@ export default function Home() {
                       alt=""
                       className="w-[180px] object-cover md:w-[300px]"
                     />
-                  </div>
-                  <div className="flex flex-col items-center justify-center gap-4 pt-6">
+                  </div> */}
+                  {/* <div className="flex flex-col items-center justify-center gap-4 pt-6">
                     <p className="font-caiti text-2xl font-bold uppercase text-[rgb(184,136,103)]">
                       &quot;Yes, I Do&quot;
                     </p>
@@ -575,43 +578,41 @@ export default function Home() {
                       <p>But I find it in my arms, right now</p>
                       <p>You are all to me.</p>
                     </div>
-                  </div>
-                  <div className="mt-8 scale-75">
-                    <Hearts pulsate />
-                  </div>
-                  <div className="relative mt-20 flex h-full w-full flex-col items-center justify-center border-[0.5px] border-[#00000055] px-4 pb-8 pt-12">
+                  </div> */}
+
+                  {/* <div className="relative mt-20 flex h-full w-full flex-col items-center justify-center border-[0.5px] border-[#00000055] px-4 pb-8 pt-12">
                     <div className="absolute -top-[18px] min-w-[70%] bg-[rgb(184,136,103)] px-8 py-2 text-center text-lg tracking-[0.125rem] text-white lg:text-xl">
                       RSVP
                     </div>
-                    {/* <img
-src="assets/images/endless.webp"
-className="aspect-[10/14] object-cover px-5"
-alt="Endless"
-/> */}
+                    <img
+                      src="assets/images/endless.webp"
+                      className="aspect-[10/14] object-cover px-5"
+                      alt="Endless"
+                    />
 
-                    {/* <div className="flex w-full animate-pulse flex-col justify-center gap-1 pt-4">
-<p className="text-center font-lora text-sm font-bold uppercase">
-  Please click the icon for RSVP
-</p>
-<p className="text-center font-pingfang text-base font-bold">
-  请点击图标填写宾客出席表
-</p>
-</div> */}
-                  </div>
-                  <div className="relative mt-24 w-full origin-right scale-110">
+                    <div className="flex w-full animate-pulse flex-col justify-center gap-1 pt-4">
+                      <p className="text-center font-lora text-sm font-bold uppercase">
+                        Please click the icon for RSVP
+                      </p>
+                      <p className="text-center font-pingfang text-base font-bold">
+                        请点击图标填写宾客出席表
+                      </p>
+                    </div>
+                  </div> */}
+                  {/* <div className="relative mt-24 w-full origin-right scale-110">
                     <Hearts
                       vertical
                       className="absolute -top-8 right-0 z-10 md:right-10"
                     />
-                  </div>
-                  <div className="max-w-screen-md px-0 md:px-7">
+                  </div> */}
+                  {/* <div className="max-w-screen-md px-0 md:px-7">
                     <img
                       src="/assets/images/ending.webp"
                       alt=""
                       className="w-full"
                     />
-                  </div>
-                  <div className="relative flex w-full max-w-screen-md flex-col items-center gap-3 px-7 py-3 font-pingfang text-sm font-thin uppercase">
+                  </div> */}
+                  {/* <div className="relative flex w-full max-w-screen-md flex-col items-center gap-3 px-7 py-3 font-pingfang text-sm font-thin uppercase">
                     <p className="text-2xl">/</p>
                     <p>Thank you for sharing</p>
                     <p>And witnessing</p>
@@ -628,7 +629,7 @@ alt="Endless"
                     <div className="mb-20 mt-3 origin-top scale-110">
                       <Hearts />
                     </div>
-                  </div>
+                  </div> */}
                 </ReactFullpage.Wrapper>
               )}
             />
