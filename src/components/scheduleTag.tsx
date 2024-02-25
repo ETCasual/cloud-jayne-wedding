@@ -17,7 +17,7 @@ export const ScheduleTag: FunctionComponent<ScheduleTagProps> = ({
 }) => {
   return (
     <div
-      className={`flex flex-col items-center justify-center gap-3 ${start ? "self-start" : "self-end"} -mt-10 first:mt-0`}
+      className={`flex flex-col items-center justify-center gap-3 ${start ? "self-start" : "self-end"} -mt-12 first:mt-0`}
     >
       <img
         src={`/assets/images/${pic}.png`}
