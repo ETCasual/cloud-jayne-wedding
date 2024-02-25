@@ -113,9 +113,9 @@
   @apply hidden;
 }
 
-.fp-table {
+/* .fp-table {
   justify-content: start !important;
-}
+} */
 
 .fullpage-wrapper {
   display: flex;
