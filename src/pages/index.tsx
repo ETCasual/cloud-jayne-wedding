@@ -421,7 +421,7 @@ export default function Home() {
                         onClick={() =>
                           window.open("https://waze.com/ul/hw2839dwsy")
                         }
-                        className="flex flex-row items-center justify-center gap-2 rounded-full bg-[#31cefe] px-3 py-1.5"
+                        className="flex flex-row items-center justify-center gap-2 rounded-full bg-[#22e5f7] px-3 py-1.5"
                       >
                         <FaWaze className="text-white" size={24} />
                         <p className="text-[12px] font-bold uppercase tracking-wide text-white md:text-base">
@@ -434,7 +434,7 @@ export default function Home() {
                             "https://maps.app.goo.gl/vSRv3FGG1TLjuuCRA",
                           )
                         }
-                        className="flex flex-row items-center justify-center gap-2 rounded-full bg-[#bbdaa4] px-3 py-1.5"
+                        className="flex flex-row items-center justify-center gap-2 rounded-full bg-[#34a853] px-3 py-1.5"
                       >
                         <FaLocationDot className="text-white" size={24} />
                         <p className="text-[12px] font-bold uppercase tracking-wide text-white md:text-base">
